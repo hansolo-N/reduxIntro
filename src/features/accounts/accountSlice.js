@@ -31,17 +31,19 @@ export default function  accountReducer( state = initialStateAccount,action){
     }
 }
 
-export function deposit(amount){
+function deposit(amount){
     return {type:"account/deposit",payload:amount}
 } 
-export function withdraw(amount){
-    return {type:"withdraw",payload:500}
+function withdraw(amount){
+    return {type:"withdraw",payload:amount}
 }
 
-export function requestLoan(amount,purpose){
+function requestLoan(amount,purpose){
     return {type:"account/requestLoan",payload:{amount:amount,purpose:purpose}}
 }
-export function payLoan()
+function payLoan()
 {
     return {type:"account/payLoan"}
 }
+
+export {deposit,withdraw,requestLoan,payLoan}
