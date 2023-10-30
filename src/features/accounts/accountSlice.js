@@ -34,7 +34,7 @@ const accountSlice = createSlice({
             state.loan = action.payload.amount
             state.loanPurpose = action.payload.purpose
             state.balance = state.balance + action.payload.amount
-        },
+        }},
         payLoan(state){
             state.balance = state.balance - state.loan
             state.loan = 0
@@ -45,7 +45,7 @@ const accountSlice = createSlice({
     convertingCurrency(state){
         state.isLoading = true
     }
-    }
+
 })
 
 // export default function  accountReducer( state = initialStateAccount,action){
